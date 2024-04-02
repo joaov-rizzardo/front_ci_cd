@@ -2,6 +2,7 @@
   "name": "06-github-actions-front-end",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "author": "Mario Souto <13791385+omariosouto@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
@@ -17,6 +18,7 @@
     "lint:fix": "next lint",
     "deploy": "yarn build && npx vercel ./build --confirm --no-clipboard",
     "deploy:prod": "yarn deploy --prod --token=$VERCEL_TOKEN",
+    "deploy:staging": "yarn deploy --token=$VERCEL_TOKEN",
     "deploy:preview": "node ./scripts/pullRequestPreview.js"
   },
   "devDependencies": {
